@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A starter for Next.JS apps with Prisma, TypeScript, and ESLint + Prettier configured to play nicely with each other",
   "bin": {
-    "create-npt-app": "./bin/generate-app.js"
+    "create-nextpt-app": "./bin/generate-app.js"
   },
   "keywords": [
     "react",
