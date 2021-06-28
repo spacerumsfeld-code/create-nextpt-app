@@ -50,3 +50,34 @@ try {
 }
 
 //actually create the project!
+async function setup() {
+  try {
+    console.log('\x1b[33m', 'Creating your project...', '\x1b[0m');
+    await runCmd(`git clone --depth 1 ${repo} ${folderName}`);
+
+    process.chdir(appPath);
+
+    console.log('\x1b[34m', 'Installing dependencies...', '\x1b[0m');
+    await runCmd('npm install');
+    console.log();
+
+    await runCmd('npx rimraf ./.git');
+
+    fs.unlinkSync(path.join(appPath, 'LICENSE.MD'));
+    fs.rmdirSync(path.join(appPath, 'bin'), { recursive: true });
+    fs.unlinkSync(path.join(appPath, 'package.json'));
+
+    buildPackageJson(packageJson, folderName);
+
+    console.log(
+      '\x1b[32m',
+      'Your app is ready to build!',
+      '\x1b[0m'
+    );
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+setup();
