@@ -6,7 +6,7 @@
 //necessary imports, eslint ignore for node module importation /w require statement
 const path = require('path');
 const util = require('util');
-const packageJson = require('../package.json');
+// const packageJson = require('../package.json');
 const fs = require('fs');
 const exec = util.promisify(require('child_process').exec);
 
@@ -67,14 +67,14 @@ async function setup() {
     fs.rmdirSync(path.join(appPath, 'bin'), { recursive: true });
     fs.unlinkSync(path.join(appPath, 'package.json'));
 
-    buildPackageJson(packageJson, folderName);
-
+    // buildPackageJson(packageJson, folderName);
     console.log(
       '\x1b[32m',
       'Your app is ready to build!',
       '\x1b[0m'
     );
 
+    await runCmd('npm uninstall rifraf');
   } catch (error) {
     console.log(error);
   }
