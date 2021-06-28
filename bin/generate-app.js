@@ -27,3 +27,8 @@ if (process.argv.length < 3) {
   console.log('Please provide a name for your application');
   process.exit(1);
 }
+
+const ownPath = process.cwd();
+const folderName = process.argv[2];
+const appPath = path.join(ownPath, folderName);
+const repo = 'https://github.com/spacerumsfeld-code/create-npt-app.git';
