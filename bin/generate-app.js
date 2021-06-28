@@ -60,7 +60,7 @@ async function setup() {
     console.log('\x1b[34m', 'Installing dependencies...', '\x1b[0m');
     await runCmd('npm install');
 
-    fs.unlinkSync(path.join(appPath, 'LICENSE.MD'));
+    fs.unlinkSync(path.join(appPath, 'LICENSE.md'));
     fs.rmdirSync(path.join(appPath, 'bin'), { recursive: true });
     fs.unlinkSync(path.join(appPath, 'package.json'));
 
