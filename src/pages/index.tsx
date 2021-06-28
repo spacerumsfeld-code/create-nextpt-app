@@ -7,7 +7,7 @@ export default function Home() {
      <title>Compelling Title</title>
      <meta name="Home Page" content="Amazing Content" />
    </Head>
-   <div>I hope create-npt-app saved you some time!</div>
+   <div>I hope create-nextpt-app saved you some time!</div>
     </>
   )
 }
