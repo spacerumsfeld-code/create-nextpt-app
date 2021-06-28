@@ -2,6 +2,9 @@
   "name": "create-npt-app",
   "version": "0.1.0",
   "private": true,
+  "bin": {
+    "create-npt-app": "./bin/generate-app.js"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
