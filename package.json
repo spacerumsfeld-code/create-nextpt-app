@@ -1,9 +1,22 @@
 {
   "name": "create-npt-app",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0",
+  "description": "A starter for Next.JS apps with Prisma, TypeScript, and ESLint + Prettier configured to play nicely with each other",
   "bin": {
     "create-npt-app": "./bin/generate-app.js"
+  },
+  "keywords": [
+    "react",
+    "next",
+    "prisma",
+    "boilerplate"
+  ],
+  "author": "Nick Papadakis",
+  "license": "MIT",
+  "homepage": "https://github.com/spacerumsfeld-code/create-npt-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spacerumsfeld-code/create-npt-app.git"
   },
   "scripts": {
     "dev": "next dev",
