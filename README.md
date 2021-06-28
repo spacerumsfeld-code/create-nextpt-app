@@ -1,4 +1,4 @@
-# Create a Next.JS App with Prisma and TypeScript.
+# Create a Next.JS App with Prisma and TypeScript
 
 Simple Next.JS boilerplate for initializing a Next.JS project with Prisma ORM and TypeScript.
 
