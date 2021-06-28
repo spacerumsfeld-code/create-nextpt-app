@@ -53,16 +53,14 @@ try {
 async function setup() {
   try {
     console.log('\x1b[33m', 'Creating your project...', '\x1b[0m');
-    await runCmd(`git clone --depth 1 ${repo} ${folderName}`);
 
+    await runCmd(`git clone --depth 1 ${repo} ${folderName}`);
     process.chdir(appPath);
 
     console.log('\x1b[34m', 'Installing dependencies...', '\x1b[0m');
-    await runCmd('npm install');
 
-    fs.unlinkSync(path.join(appPath, 'LICENSE.md'));
+    await runCmd('npm install');
     fs.rmdirSync(path.join(appPath, 'bin'), { recursive: true });
-    fs.unlinkSync(path.join(appPath, 'package.json'));
 
     console.log(
       '\x1b[32m',
