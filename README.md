@@ -37,7 +37,7 @@ npm install @prisma/client
 ```
 to install the Prisma client for your application.
 
-That's it! Simply uncomment the content of /src/lib/prisma.ts and import prisma into any environment you need to make a query!
+That's it! Simply import 'prisma' from /lib/prisma.ts anywhere you need to make a query to your database!
 
 3. Enforce linting and styling
 Simply set Prettier to be the default formatter in your IDE and you are all set! ESLint and Prettier are already configured to play nicely with each other, with ESLINT dedicated to detecting possible problems and Prettier dedicated to maintaining code quality with styling. (Recommended: set Prettier to format on each save).
