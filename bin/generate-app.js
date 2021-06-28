@@ -27,6 +27,7 @@ if (process.argv.length < 3) {
   process.exit(1);
 }
 
+//define paths and repo for building
 const ownPath = process.cwd();
 const folderName = process.argv[2];
 const appPath = path.join(ownPath, folderName);
@@ -58,15 +59,11 @@ async function setup() {
 
     console.log('\x1b[34m', 'Installing dependencies...', '\x1b[0m');
     await runCmd('npm install');
-    console.log();
-
-    // await runCmd('npx rimraf ./.git');
 
     fs.unlinkSync(path.join(appPath, 'LICENSE.MD'));
     fs.rmdirSync(path.join(appPath, 'bin'), { recursive: true });
     fs.unlinkSync(path.join(appPath, 'package.json'));
 
-    // buildPackageJson(packageJson, folderName);
     console.log(
       '\x1b[32m',
       'Your app is ready to build!',
