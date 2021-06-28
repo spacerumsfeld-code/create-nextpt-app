@@ -32,3 +32,21 @@ const ownPath = process.cwd();
 const folderName = process.argv[2];
 const appPath = path.join(ownPath, folderName);
 const repo = 'https://github.com/spacerumsfeld-code/create-npt-app.git';
+
+//create directory if no directory with same name exists
+try {
+  fs.mkdirSync(appPath);
+} catch (err) {
+  if (err.code === 'EEXIST') {
+    console.log(
+      '\x1b[31m',
+      `The directory '${folderName}' already exists; please choose another name`,
+      '\x1b[0m'
+    );
+  } else {
+    console.log(err);
+  }
+  process.exit(1);
+}
+
+//actually create the project!
